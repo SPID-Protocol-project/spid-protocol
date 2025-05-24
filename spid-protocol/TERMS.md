@@ -1,0 +1,3 @@
+# SPID Protocol Terms of Use
+
+Legal terms covering use of SPID and Smart Packets...
