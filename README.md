@@ -1,4 +1,4 @@
-# Welcome to the SPID Protocol Project 👋
+# Welcome to the SPID Protocol Project 👋 
 
 **We're building the open standard for voice-first, structured communication.**
 
