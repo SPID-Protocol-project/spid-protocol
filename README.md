@@ -1,5 +1,10 @@
 # Welcome to the SPID Protocol Project 👋 
 
+<p align="">
+  <img src="public/spid_logo.png" width="220" alt="SPID Protocol Logo" />
+</p>
+
+
 **We're building the open standard for voice-first, structured communication.**
 
 Official spec, governance, and open standards for the SPID Protocol and Smart Packets.
