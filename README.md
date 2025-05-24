@@ -30,6 +30,14 @@ The SPID Protocol enables AI assistants to retrieve live, human-approved Smart P
 
 ---
 
+## 📊 Architecture Overview
+
+The SPID Protocol routes AI queries to voice-ready Smart Packets using a simple, structured resolution flow.
+
+![SPID Architecture](docs/SPID_Architecture.png)
+
+---
+
 ## 📣 Join the Movement
 
 * [spid.directory](https://spid.directory) – Register, resolve, and explore
