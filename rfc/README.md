@@ -1,73 +1,36 @@
-# SPID Protocol RFC Template
+# RFC Directory
 
-**Title:** \[Concise descriptive title]
-**RFC Number:** RFC-\[auto assigned or draft]
-**Author(s):** \[Name or GitHub handle]
-**Created:** \[YYYY-MM-DD]
-**Status:** Draft | Proposed | Accepted | Rejected
+Welcome to the SPID Protocol RFC system. RFCs (Requests for Comments) are how we improve, extend, or clarify the SPID Protocol, Smart Packet format, PulseID system, and supporting APIs.
 
 ---
 
-## 📘 Summary
+## 📄 How to Submit an RFC
 
-Provide a short overview (2–3 sentences) of what this RFC proposes and why it matters.
+1. Copy the `template.md` file in this directory
+2. Rename it to something descriptive: `rfc-[topic].md`
+3. Fill out all sections as thoroughly as possible
+4. Submit your proposal as a pull request to this repo
 
----
+Each RFC will be:
 
-## 🧠 Motivation
-
-Explain the problem this proposal solves or the limitation it addresses in the current SPID Protocol or Smart Packet implementation.
-
----
-
-## 🛠️ Technical Proposal
-
-Describe the proposed changes or additions:
-
-* New fields, properties, or metadata
-* Changes to resolver logic
-* Updates to PulseID behavior, CTA mapping, etc.
-* Suggested syntax or schema examples
-
-Code snippets, diagrams, and Smart Packet JSON examples are welcome.
+* Reviewed by maintainers and community
+* Discussed publicly via GitHub Issues or Discussions
+* Assigned a status: `Draft`, `Proposed`, `Accepted`, or `Rejected`
 
 ---
 
-## 🔁 Backward Compatibility
+## ✅ Criteria for Acceptance
 
-* Does this change break existing implementations?
-* If so, what’s the migration or fallback path?
-* How should clients handle packets using the old vs. new logic?
+We favor RFCs that:
 
----
+* Preserve backward compatibility
+* Add value to a wide range of use cases
+* Maintain the clarity, ethics, and intent of the SPID Protocol
 
-## 🧪 Alternatives Considered
-
-Describe any other ideas that were considered and why they weren’t chosen.
+RFCs that introduce breaking changes should include migration strategies.
 
 ---
 
-## 📎 Related Links
+## 📬 Questions?
 
-* GitHub issues, previous RFCs, or prototypes related to this topic
-* Any specs, protocols, or models this draws from or affects
-
----
-
-## ✅ Suggested Reviewers
-
-(Optional) List contributors or community members who should review this RFC.
-
----
-
-## 🗳️ Adoption Path (if applicable)
-
-If this RFC is accepted:
-
-* What are the steps to implement?
-* Which repo(s) or tools will it affect?
-* Who will lead or volunteer the initial implementation?
-
----
-
-> Submit your RFC as a new markdown file in the `/rfc/` directory using the filename format `rfc-[title-with-dashes].md`.
+Open an issue or contact us at [hello@voicemate.id](mailto:hello@voicemate.id)
