@@ -1,0 +1,103 @@
+# 📘 Smart Packet Specification (v1.0)
+
+The **Smart Packet** is the atomic content unit of the SPID Protocol — a portable, self-contained, voice-first message format that can be delivered via AI assistants, chatbots, voice inboxes, or web links.
+
+It is optimized for:
+
+* Voice delivery (via audio or TTS)
+* Contextual AI retrieval (via SPID)
+* Human action (via call-to-action metadata)
+
+---
+
+## 📦 Smart Packet Structure
+
+Smart Packets are JSON-based and contain the following key fields:
+
+```json
+{
+  "@type": "SmartPacket",
+  "spid": "spid://yourdomain/product123",
+  "title": "Limited-Time Mortgage Protection Offer",
+  "transcript": "Hi, I’m Rick from VoiceMate. Just wanted to share a quick tip on protecting your home...",
+  "audio": "https://yourdomain.com/audio/product123.mp3",
+  "intent": "offer.mortgage_protection",
+  "cta": [
+    {
+      "label": "Book Appointment",
+      "action": "https://yourdomain.com/book"
+    },
+    {
+      "label": "Learn More",
+      "action": "https://yourdomain.com/info"
+    }
+  ],
+  "metadata": {
+    "createdBy": "rick@voicemate.id",
+    "language": "en",
+    "createdAt": "2025-05-24T18:00:00Z"
+  }
+}
+```
+
+---
+
+## 🧠 Required Fields
+
+| Field        | Description                                  |
+| ------------ | -------------------------------------------- |
+| `@type`      | Must be `SmartPacket`                        |
+| `spid`       | A valid SPID URI identifying the packet      |
+| `transcript` | Plain text version of the message            |
+| `audio`      | URL to the associated audio file (or `null`) |
+| `intent`     | Machine-readable topic for CTA resolution    |
+| `cta`        | Array of one or more Call-To-Actions         |
+
+---
+
+## 🔘 CTA Schema
+
+Each CTA object in the `cta[]` array may include:
+
+| Field      | Required     | Description                                    |
+| ---------- | ------------ | ---------------------------------------------- |
+| `label`    | ✅            | Button or action text shown to the user        |
+| `action`   | ✅            | URL or action command (e.g. `share`, `call`)   |
+| `priority` | ⬛ (optional) | Ranks CTA relevance (lower is higher priority) |
+
+---
+
+## ⚠️ Notes on Audio
+
+* Use `.mp3` or `.ogg` files for best compatibility
+* For AI playback, ensure the voice is professional, friendly, and aligned with your brand
+* You may omit `audio` and rely on live TTS (if client supports it)
+
+---
+
+## 🔐 Validation Rules
+
+* All required fields must be present and non-null
+* `spid` must match a valid SPID URI format (`spid://domain/slug`)
+* At least one CTA is required
+
+---
+
+## 🌐 Usage Contexts
+
+Smart Packets may be delivered via:
+
+* `spid.directory` resolution
+* VoiceMate inboxes
+* QR code links or SMS campaigns
+* Embedded widgets in web apps
+
+---
+
+## 🔗 See Also
+
+* [SPID Protocol Overview](../docs/overview.md)
+* [Intent → CTA Map](../intent-map)
+* [RFCs on Packet Extensions](../rfc)
+
+For questions or spec proposals, email [hello@voicemate.id](mailto:hello@voicemate.id)
