@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smart Packet Validator</title>
+  <meta charset="UTF-8" />
+  <style>
+    body { font-family: Arial, sans-serif; padding: 2rem; }
+    textarea { width: 100%; height: 200px; margin-bottom: 1rem; }
+    pre { background: #f4f4f4; padding: 1rem; }
+  </style>
+</head>
+<body>
+  <h1>Smart Packet Validator</h1>
+  <p>Paste your Smart Packet JSON below to validate required fields:</p>
+  <textarea id="packetInput">{}</textarea>
+  <button onclick="validate()">Validate</button>
+  <pre id="output"></pre>
+
+  <script>
+    function validate() {
+      const requiredFields = ['@type', 'spid', 'transcript', 'audio', 'intent', 'cta'];
+      const input = document.getElementById('packetInput').value;
+      const output = document.getElementById('output');
+      try {
+        const packet = JSON.parse(input);
+        let messages = [];
+        requiredFields.forEach(field => {
+          if (!packet[field]) {
+            messages.push(`❌ Missing required field: ${field}`);
+          }
+        });
+        if (packet['@type'] !== 'SmartPacket') {
+          messages.push('❌ @type must be SmartPacket');
+        }
+        if (!Array.isArray(packet['cta']) || packet['cta'].length === 0) {
+          messages.push('❌ At least one CTA is required');
+        }
+        output.textContent = messages.length ? messages.join("\n") : '✅ Packet is valid!';
+      } catch (e) {
+        output.textContent = '❌ Invalid JSON';
+      }
+    }
+  </script>
+</body>
+</html>

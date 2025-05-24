@@ -1,0 +1,23 @@
+{
+  "@type": "SmartPacket",
+  "spid": "spid://example.com/demo-packet",
+  "title": "Welcome to SPID",
+  "transcript": "Hey there! Thanks for checking out the SPID Protocol. Let me show you around.",
+  "audio": "https://example.com/audio/welcome.mp3",
+  "intent": "onboarding.welcome",
+  "cta": [
+    {
+      "label": "Learn More",
+      "action": "https://spid.directory/docs"
+    },
+    {
+      "label": "Register Your SPID",
+      "action": "https://spid.directory/register"
+    }
+  ],
+  "metadata": {
+    "createdBy": "hello@voicemate.id",
+    "language": "en",
+    "createdAt": "2025-05-24T18:00:00Z"
+  }
+}
