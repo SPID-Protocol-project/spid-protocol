@@ -68,7 +68,7 @@ For regulators, standards bodies, enterprise partners, and governance stakeholde
 - Patent Claims Summary
 - Future Roadmap
 
-👉 [Download the full SPID Protocol White Paper (v1.2)]((https://www.overleaf.com/read/cxxtnfvfyxvr#9d719a))
+👉 [Download the full SPID Protocol White Paper (v1.2)](https://www.overleaf.com/read/cxxtnfvfyxvr#9d719a)
 
 ---
 
